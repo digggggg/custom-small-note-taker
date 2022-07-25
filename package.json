@@ -9,6 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.18.1",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digggggg/custom-small-note-taker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/digggggg/custom-small-note-taker/issues"
+  },
+  "homepage": "https://github.com/digggggg/custom-small-note-taker#readme"
 }
