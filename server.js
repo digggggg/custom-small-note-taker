@@ -4,7 +4,7 @@ const path = require("path")
 
 const uuid = require('./uuid.js')
 
-const db = require('./db/db.json')
+let db = require('./db/db.json')
 /* const home = require('./public/index.html')
 const notes = require('./public/notes.html') */
 const PORT = process.env.PORT || 5000;
@@ -59,16 +59,26 @@ app.post('/api/notes', (req, res) =>{
           ? console.error(writeErr)
           : console.info("Successfully updated reviews!")
       )
+
+
+
     }
+    
+
+    const response = {
+      body: newNote
+    }
+    res.json(response)
   })
 })
   
 
 
 // optional delete note delete request
-app.delete('/api/notes/:id', (req, res) =>{
-
-})
+// TOO TIRED TO FIGURE IT OUT SORRY!
+/* app.delete('/api/notes/:id', (req, res) =>{
+  const delID = ''
+}) */
 
 app.listen(PORT, () => {
     console.log(`Listening at http://localhost:${PORT}`)
