@@ -22,6 +22,8 @@ Git clone the repository at https://github.com/digggggg/custom-small-note-taker.
 
 Here is a gif of my project in action hosted on heroku
 
+![Gif of using my deployed application](https://github.com/digggggg/custom-small-note-taker/blob/main/Note%20Taker.gif)
+
 ## Contributing
 
 digggggg
