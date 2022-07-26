@@ -2,6 +2,8 @@ const fs = require('fs')
 const express = require('express')
 const path = require("path")
 
+const uuid = require('./uuid.js')
+
 const db = require('./db/db.json')
 /* const home = require('./public/index.html')
 const notes = require('./public/notes.html') */
@@ -33,10 +35,35 @@ app.get('/api/notes', (req, res) =>{
 })
 // api notes post request
 app.post('/api/notes', (req, res) =>{
+
+  const {title, text} = req.body
+
   const newNote = {
-    
+    title,
+    text,
+    id: uuid(),
   }
+
+  fs.readFile('./db/db.json', 'utf8', (err, data) =>{
+    if (err){
+      console.error(err)
+    } else {
+      const parsedNotes = JSON.parse(data)
+
+      parsedNotes.push(newNote)
+      db = parsedNotes
+
+      fs.writeFile('./db/db.json', JSON.stringify(parsedNotes, null), 
+      (writeErr) => 
+        writeErr  
+          ? console.error(writeErr)
+          : console.info("Successfully updated reviews!")
+      )
+    }
+  })
 })
+  
+
 
 // optional delete note delete request
 app.delete('/api/notes/:id', (req, res) =>{
