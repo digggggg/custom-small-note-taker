@@ -2,7 +2,7 @@
 
 ## Description
 
-I made a note taker that uses Get and Post requests to save, read, and write data to a json file. The project dependencies are path, express, and fs.  
+I made a note taker that uses Get and Post requests to save, read, and write data to a json file. The json file is then used to fill in the website with the users information. A delete btn is added but still needs functionality. The project was my first attempt at using get and post requests in tandam witih json files. The project dependencies are path, express, and fs.  
 
 ## Table of Contents
 
@@ -34,7 +34,9 @@ MIT License
 
 ## Badges
 ![MIT](https://img.shields.io/badge/MIT-License-blue)
-
+![js 64.3%](https://img.shields.io/badge/js-64.3%25-yellow)
+![css 11.4%](https://img.shields.io/badge/css-11.4%25-blue)
+![html 24.3%](https://img.shields.io/badge/html-24.3-red)
 
 
 ## Questions
