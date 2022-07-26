@@ -4,7 +4,7 @@ const path = require("path")
 
 /* const home = require('./public/index.html')
 const notes = require('./public/notes.html') */
-const PORT = 6969;
+const PORT = process.env.PORT || 5000;
 const app = express()
 
 app.use(express.static('public'))
